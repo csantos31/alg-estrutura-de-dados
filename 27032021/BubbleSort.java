@@ -1,33 +1,30 @@
 import java.util.Scanner;
 import java.util.Random;
+import java.util.Date;
 
 public class BubbleSort{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         char continua;
+        Date objetoDate = new Date();
+
         do{
             System.out.println("\n\t Digite o tamanho do vetor \n\t");
             int n = scanner.nextInt();
             int v[] = new int[n];
-            exibeVetor(v, "Vetor zerado");
             preencheVetor(v);
-            exibeVetor(v, "Vetor gerado");
+            
+            long inicio = objetoDate.getTime();
             BubbleSortMethod(v);
-            exibeVetor(v,"Vetor ordenado");
+            long fim = objetoDate.getTime();
+            System.out.println("\nTempo de ordenação para o tamanho "+n+"="+(fim-inicio) + " ms/n");
+            
             scanner.nextLine();
             System.out.println("\n\t Executar novamente? (S / N) \n\t");
             continua = scanner.nextLine().toUpperCase().charAt(0);
 
         }while(continua == 'S');
         scanner.close();
-    }
-
-    static void exibeVetor(int [] v, String msg){
-        System.out.println("\n\t" + msg + "\n");
-        for (int i=0; i<v.length; i++){
-            System.out.printf("%d ", v[i]);
-        }
-        System.out.println();
     }    
 
     static void preencheVetor(int v[]){
