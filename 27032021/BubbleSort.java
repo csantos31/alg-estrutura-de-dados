@@ -6,7 +6,6 @@ public class BubbleSort{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         char continua;
-        Date objetoDate = new Date();
 
         do{
             System.out.println("\n\t Digite o tamanho do vetor \n\t");
@@ -14,9 +13,9 @@ public class BubbleSort{
             int v[] = new int[n];
             preencheVetor(v);
             
-            long inicio = objetoDate.getTime();
+            long inicio = new Date().getTime();
             BubbleSortMethod(v);
-            long fim = objetoDate.getTime();
+            long fim = new Date().getTime();
             System.out.println("\nTempo de ordenação para o tamanho "+n+"="+(fim-inicio) + " ms/n");
             
             scanner.nextLine();
