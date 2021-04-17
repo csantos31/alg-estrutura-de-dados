@@ -1,0 +1,12 @@
+LIFO = pilha
+
+pilha de pratos, livros, cartas e potes
+
+-organização dos registro do historico do navegador
+-organização de registros de chamadas no telefone celular
+
+--------------------------------------------------------------
+
+
+FIFO = fila
+fila de impressão, 
