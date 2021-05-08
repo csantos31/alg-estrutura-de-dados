@@ -2,12 +2,6 @@
 
 
 
-decida aleatoriamente (que tal usar a classe Random:
-https://docs.oracle.com/javase/8/docs/api/java/util/Random.html)
-se está acesa ou apagada. 
-
-Crie uma classe de teste que 
-instancia 3 lâmpadas e as exibe.
 
 
 2. Criar uma classe em Java chamada Data que inclui três informações 

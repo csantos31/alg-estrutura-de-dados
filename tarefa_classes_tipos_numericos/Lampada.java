@@ -68,11 +68,13 @@ public class Lampada{
 
     @Override 
     public String toString(){
-        return  "\n\tRESUMO DA LÂMPADA"+
+        return  "\n\t***************************************"+
+                "\n\tRESUMO DA LÂMPADA"+
                 "\n\tTENSÃO: "+ this.tensao + "V"+
                 "\n\tTIPO: "+ this.tipo +
                 "\n\tPOTÊNCIA: "+ this.potencia + "W"+
-                "\n\tSTATUS: "+ (this.isStatus() ? "Acesa" : "Apagada");
+                "\n\tSTATUS: "+ (this.isStatus() ? "Acesa" : "Apagada")+
+                "\n\t***************************************";
     }
 
 }
