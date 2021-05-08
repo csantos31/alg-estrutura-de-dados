@@ -1,0 +1,56 @@
+
+
+
+
+decida aleatoriamente (que tal usar a classe Random:
+https://docs.oracle.com/javase/8/docs/api/java/util/Random.html)
+se está acesa ou apagada. 
+
+Crie uma classe de teste que 
+instancia 3 lâmpadas e as exibe.
+
+
+2. Criar uma classe em Java chamada Data que inclui três informações 
+como variáveis de instância:
+mês (int),
+dia (int)
+e ano (int).
+A classe deve ter métodos get e set para cada variável e um construtor que inicializa 
+as variáveis e assume que os valores fornecidos são corretos. 
+O método toString deve construir a representação textual com dia, mês e ano 
+separados por barras normais ( / ).
+Esta classe deve ter um método diaSeguinte e um diaAnterior 
+(para facilitar, vamos considerar que todo mês tem 30 dias). 
+Escreva um aplicativo TesteData que lê as informações de uma data via teclado
+e depois exibe um dia depois e um dia antes.
+Sobre representação de tipos e suas limitações
+
+1. Considere os seguintes trechos de código em Java. Verifique os valores resultantes das
+operações em cada caso, discuta com seus companheiros de turma. Pesquise na documentação
+ou no material de algum curso que tenha feito e justifique esses valores.
+Considere
+a. byte a = 40;
+b. byte b = 50;
+c. byte c = 100;
+d. int d = a * b / c;
+e. byte d = a * b / c;
+➔ O que acontece em d e e?
+➔ Se alterarmos: a=4, b=5, c=10, muda alguma coisa?
+f. byte e = 50;
+g. byte f = e * 6;
+➔ em f, foi o valor esperado?
+
+2. Considere as seguintes atribuições em Java:
+a. byte b = 42;
+b. char c = 'a';
+c. short s = 1024;
+d. int i = 50000;
+e. float f = 5.67f;
+f. double d = 0.1234;
+A partir delas, derivou-se a expressão (f * b) + (i / c) - (d * s). Mostre qual o tipo
+e valores resultantes em cada uma das etapas intermediárias dessa expressão:
+a) (f * b)
+b) (i / c)
+c) (f * b) + (i / c)
+d) (d * s)
+e) (f * b) + (i / c) - (d * s)
