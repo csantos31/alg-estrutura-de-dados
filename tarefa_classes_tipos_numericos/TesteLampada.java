@@ -11,5 +11,6 @@ public class TesteLampada{
         System.out.println(l1);
         System.out.println(l2);
         System.out.println(l3);
-    }    
+    }  
+      
 }
