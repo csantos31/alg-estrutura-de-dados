@@ -19,12 +19,22 @@ public class Data{
 
     // PropriedadesMeses meses = new PropriedadesMeses(2018);
             
-    //         System.out.println(meses.listaDeMeses.get(2));
+    // System.out.println(meses.listaDeMeses.get(2));
 
     public Data diaSeguinte(int dia, int mes, int ano){
         PropriedadesMeses meses = new PropriedadesMeses(ano);
-        int diaSeguinte = meses.listaDeMeses.get(mes).getQuantidadeDias() == dia ? 1 : ++dia;
-        return new Data(diaSeguinte, mes, ano);
+        int diaSeguinte=0;
+        
+        if (meses.listaDeMeses.get(mes).getQuantidadeDias() == dia){
+            diaSeguinte=1;
+            mes++;  
+            ano++;
+        }else{
+            diaSeguinte = ++dia;
+        } 
+        mes = mes == 13 ? 1 : mes;
+        
+        return new Data(diaSeguinte,mes,ano);
     }
 
     public void diaAnterior(){
