@@ -4,19 +4,7 @@
 
 
 
-2. Criar uma classe em Java chamada Data que inclui três informações 
-como variáveis de instância:
-mês (int),
-dia (int)
-e ano (int).
-A classe deve ter métodos get e set para cada variável e um construtor que inicializa 
-as variáveis e assume que os valores fornecidos são corretos. 
-O método toString deve construir a representação textual com dia, mês e ano 
-separados por barras normais ( / ).
-Esta classe deve ter um método diaSeguinte e um diaAnterior 
-(para facilitar, vamos considerar que todo mês tem 30 dias). 
-Escreva um aplicativo TesteData que lê as informações de uma data via teclado
-e depois exibe um dia depois e um dia antes.
+
 Sobre representação de tipos e suas limitações
 
 1. Considere os seguintes trechos de código em Java. Verifique os valores resultantes das

@@ -15,10 +15,7 @@ public class Data{
         this.dia = dia;
     }
 
-
-
-    // PropriedadesMeses meses = new PropriedadesMeses(2018);
-            
+    // PropriedadesMeses meses = new PropriedadesMeses(2018);            
     // System.out.println(meses.listaDeMeses.get(2));
 
     public Data diaSeguinte(int dia, int mes, int ano){
@@ -28,17 +25,25 @@ public class Data{
         if (meses.listaDeMeses.get(mes).getQuantidadeDias() == dia){
             diaSeguinte=1;
             mes++;  
-            ano++;
         }else{
             diaSeguinte = ++dia;
         } 
+        ano = mes == 13 ? ++ano : ano;
         mes = mes == 13 ? 1 : mes;
         
         return new Data(diaSeguinte,mes,ano);
     }
 
-    public void diaAnterior(){
-
+    public Data diaAnterior(int dia, int mes, int ano){
+        PropriedadesMeses meses = new PropriedadesMeses(ano);        
+        if (dia == 1){
+            mes = mes == 1 ? 12 : mes--;
+            dia=meses.listaDeMeses.get(mes).getQuantidadeDias();
+            ano = mes == 12 ? --ano : ano;
+        }else{
+            dia--;
+        } 
+        return new Data(dia,mes,ano);
     }
 
 	public int getAno() {
@@ -65,10 +70,11 @@ public class Data{
 		this.dia = dia;
 	}
 
-
     @Override
     public String toString(){
-        return this.getDia() + "/" + this.getMes() + "/" + this.getAno();
+        PropriedadesMeses meses = new PropriedadesMeses(2021); 
+        return this.getDia() + " / "
+                + meses.listaDeMeses.get(this.getMes()).getNome() + " / " + this.getAno();
     }
 
 }
