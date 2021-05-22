@@ -1,0 +1,16 @@
+Tarefa referente a recursão
+Vence 23 de maio de 2021 23:59
+Instruções
+Implemente uma classe em Java com métodos recursivos (devem ser static) que:
+
+1) recebe um número inteiro positivo N e calcula o somatório dos números de 1 a N.
+
+2) recebe um número inteiro positivo par N (não é necessário testar, suponha que a entrada está sempre certa) e imprime todos os números pares de 0 até N em ordem decrescente.
+
+3) recebe um número N e retorne o N-ésimo termo da sequência de "tribonacci". Os números tribonacci são definidos pela seguinte recursão
+ f(n) = 0 se n = 0
+ f(n) = 0 se n = 1
+ f(n) = 1 se n = 2
+ f(n) = f(n-1)+f(n-2)+f(n-3) se n > 3
+
+A classe deve conter também um método main que testa os métodos criados.
