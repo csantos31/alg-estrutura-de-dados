@@ -1,0 +1,23 @@
+
+Instruções
+1) Construir um método na classe Pilha para realizar cada tarefa descrita a seguir. 
+    Em cada método, você pode utilizar objetos Pilha auxiliares. 
+    Crie também uma classe de teste para seus métodos.
+        
+a) Uma "pilha forte" só pode ter elementos menores ou iguais sobre um elemento. 
+    Construir um método "empilhaForte" que realiza esse tipo de teste.
+        Uma pilha forte           Uma pilha que não é forte
+            2                                       7 <- esse elemento está sobre um elemento menor que ele
+            4                                       4
+            7                                       6
+
+b) Um desenvolvedor está criando um jogo novo de paciência: 
+    a carta que pode ser retirada é a segunda carta, quando exite mais que uma no monte. Vamos ajudá-lo: 
+        crie um método desempilhaDeBaixo.
+
+
+2) Um algoritmo para transformar um número n10 na base 10 para base 2 
+    consiste em dividir o número n10 por 2 até que ele se torne 0. 
+    O número n2 na base 2 equivalente a n10 é obtido tomando-se os restos das divisões em ordem inversa. 
+    Parece que uma pilha poderia ajudar na resolução desse problema:
+     Construir um programa que utiliza pilha para transformar um número na base 10 para base 2. 
