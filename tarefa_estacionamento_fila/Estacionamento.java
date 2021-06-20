@@ -17,12 +17,49 @@ public class Estacionamento{
             System.out.println("O carro "+placa+" entrou");
             if(!this.estacionamentoVazio()){
                 novo.setProximo(this.getEntrada());
+            }else{
+                this.setSaida(novo);
             }
             this.setEntrada(novo);
             this.setVagasDisponiveis(this.getVagasDisponiveis()-1);
+
         }else{
             System.out.println("\nO carro "+placa+" nao pode entrar pois nao ha mais vagas disponiveis\n");
         }
+    }
+
+    public void removeCarro(String placa){
+        Carro carroSaindo = new Carro(placa);
+        Carro carroAux = this.getEntrada();
+        while(carroAux.getProximo() != null){
+            if(carroSaindo.getPlaca() != this.getSaida().getPlaca()){
+                String placaAux = this.getSaida().getPlaca();
+                this.removeSaida();
+                this.insereEntrada(placaAux);
+                this.entrada.setVoltasNoQuart(this.entrada.getVoltasNoQuart()+1);
+            }else{
+                this.removeSaida();
+                this.setSaida(this.getSaida());
+            }
+        }
+    }
+
+    public Carro removeSaida(){
+        Carro saidaAux = this.getSaida();
+        System.out.println(saidaAux.getPlaca() + " saindo");
+        if(this.entrada == this.saida){
+            this.setEntrada(null);
+            this.setSaida(null);
+        }else{
+            Carro aux = this.entrada;
+            while(aux.getProximo() != this.saida){
+                aux = aux.getProximo();
+            }
+            aux.setProximo(null);
+            this.setSaida(aux);
+        }
+        this.setVagasDisponiveis(this.getVagasDisponiveis()-1);
+        return saidaAux;
     }
 
     public boolean estacionamentoCheio(){
@@ -58,7 +95,11 @@ public class Estacionamento{
 	}
 
 	public Carro getSaida() {
-		return this.saida;
+        Carro aux = this.getEntrada();
+        while(aux.getProximo() != null){
+            aux=aux.getProximo();
+        }
+        return aux;
 	}
 
 	public void setSaida(Carro saida) {

@@ -2,17 +2,16 @@ public class Carro{
     private String placa;
     private Carro proximo;
     private int voltasNoQuart;
-    private int entrada;
-    private int saida;
-
+    private Carro entrada;
+    private Carro saida;
 
     public Carro(String placa){
         this.setPlaca(placa);
         this.setProximo(null);
         this.setVoltasNoQuart(0);
         //A DEFINIR
-        this.setEntrada(0);
-        this.setSaida(0);
+        this.setEntrada(null);
+        this.setSaida(null);
     }
 
 
@@ -40,25 +39,25 @@ public class Carro{
 		this.voltasNoQuart = voltasNoQuart;
 	}
 
-	public int getEntrada() {
+    public Carro getEntrada() {
 		return this.entrada;
 	}
 
-	public void setEntrada(int entrada) {
+	public void setEntrada(Carro entrada) {
 		this.entrada = entrada;
 	}
 
-	public int getSaida() {
+	public Carro getSaida() {
 		return this.saida;
 	}
 
-	public void setSaida(int saida) {
+	public void setSaida(Carro saida) {
 		this.saida = saida;
 	}
 
     @Override
     public String toString(){
-        return "[" + this.placa + "] ";
+        return "[" + this.placa + "]("+this.voltasNoQuart +") ";
     }
 
 }

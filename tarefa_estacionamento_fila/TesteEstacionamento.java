@@ -6,7 +6,10 @@ public class TesteEstacionamento{
         estacionamento.insereEntrada("CINZA");
         estacionamento.insereEntrada("VERMELHO");
         estacionamento.insereEntrada("AMARELO");
-
         System.out.println(estacionamento);
+        
+        estacionamento.removeCarro("VERMELHO");
+        System.out.println(estacionamento);
+        
     }
 }
