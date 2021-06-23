@@ -1,0 +1,16 @@
+Tarefa referente à avaliação A2
+Vence 27 de junho de 2021 23:59
+Instruções
+Estudamos em sala a estrutura lista ligada e vimos que ela pode ser implementada de diversas maneiras. 
+
+Para esta tarefa você vai implementar mais um tipo: lista duplamente encadeada (ListaDupla), com informações de primeiro e último. Não vamos trabalhar herança aqui, só a implementação da lista.
+
+a) comece pelo nó (NoDuplo), que deverá ter 3 atributos int info, NoDuplo anterior e NoDuplo proximo. A classe deve basear-se na classe No que implementamos em sala.
+
+b) A classe ListaDupla deve ter construtor, gets e sets e os métodos para inserção e remoção de início de de fim.
+
+c) Não esqueça o toString para poder verificar se a lista está realmente ligada (rsrs).
+
+d) Crie também uma classe de teste para executar as operações.
+
+Este exercício pode ser feito em grupos de até 3 pessoas. No entanto, peço que todos entreguem, para facilitar a correção. Coloquem um comentário no arquivo de teste com os nome de todos integrantes do grupo, vai me ajudar bastante. A melhor forma de envio é um .zip com os arquivos .java (cuidado para não enviar os .class, o aplicativo pode bloquear). Eventuais dúvidas poderão ser esclarecidas na próxima aula. Segue uma imagem para ajudá-los no entendimento.

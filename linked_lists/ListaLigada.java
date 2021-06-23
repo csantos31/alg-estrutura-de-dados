@@ -20,7 +20,7 @@ public class ListaLigada{
     //OPERAÇÕES DE INICIO CARACTERIZAM PILHA
     public void insereInicio(int info){
         No novo = new No(info);
-        if(!listaVazia()){
+        if(!this.listaVazia()){
             novo.setProximo(this.primeiro);
         }
         this.setPrimeiro(novo);
